@@ -82,7 +82,7 @@ def main():
 	PASSWORD = os.getenv('PASSWORD')
 	USER_AGENT = os.getenv('USER_AGENT')
 	reddit = praw.Reddit(client_id=CLIENT_ID, client_secret=CLIENT_SECRET, username=USERNAME, password=PASSWORD, user_agent=USER_AGENT)
-	subreddit = reddit.subreddit('Hot_Individual3301')#chess')
+	subreddit = reddit.subreddit('chess')
 
 	#STREAM READS IN ALL NEW COMMENTS
 	for comment in subreddit.stream.comments(skip_existing=True):
